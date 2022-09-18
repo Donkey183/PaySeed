@@ -9,9 +9,9 @@ import Backa from '../containers/demo/backa';
 import HeaderImageScrollView from '../containers/gong/HeaderImageScrollView';
 
 module.exports = {
-  // Mo,
+  Mo,
   Zi,
-  // Gong,
+  Gong,
   Cheng,
   Web,
   Back,
