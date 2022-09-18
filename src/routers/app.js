@@ -1,5 +1,5 @@
 import { createBottomTabNavigator, createStackNavigator, createAppContainer, createSwitchNavigator, } from 'react-navigation';
-import { mergeJSON, } from 'utils/util';
+// import { mergeJSON, } from 'utils/util';
 
 import { BottomTabNavigatorConfig, StackNavigatorConfig, } from '../config';
 import * as pages from './index';
@@ -7,13 +7,13 @@ import * as pages from './index';
 
 const TabNav = createBottomTabNavigator(
   {
-    Mo: pages.Mo,
+    // Mo: pages.Mo,
     Zi: pages.Zi,
-    Gong: pages.Gong,
+    // Gong: pages.Gong,
     Cheng: pages.Cheng,
   },
   BottomTabNavigatorConfig({
-    initialRouteName: 'Mo',
+    initialRouteName: 'Zi',
   }),
 );
 
@@ -30,7 +30,7 @@ TabNav.navigationOptions = ({ navigation, }) => {
   } else {
     targetNavigationOptions = { ...__navigationOptions, };
   }
-  mergeJSON(__defaultNavigationOptions, targetNavigationOptions);
+  // mergeJSON(__defaultNavigationOptions, targetNavigationOptions);
   return targetNavigationOptions;
 };
 
