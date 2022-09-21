@@ -18,11 +18,19 @@ const styles = StyleSheet.create({
 export default class Backa extends Component {
   static navigationOptions = {
     headerTitle: '第一个入栈的页面',
+    // 把返回标题改成 绿色了
+    headerBackTitleStyle: {
+      color: '#FFCCAA',
+    },
+    // headerBackImage: require("../../images/back.png"),
+    headerStyle: {
+      backgroundColor: "#FFFFFF",
+    },
   };
 
   goBack = () => {
     const { navigation, } = this.props;
-    navigation.navigate('Back');
+    navigation.navigate('Login');
   };
 
   render() {
@@ -34,7 +42,7 @@ export default class Backa extends Component {
             this.goBack();
           }}
         >
-          点此去第二个入栈的页面
+          去登陆
         </Text>
       </View>
     );

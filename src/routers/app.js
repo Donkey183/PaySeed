@@ -40,6 +40,8 @@ const AppStack = createStackNavigator(
     Web: pages.Web,
     Back: pages.Back,
     Backa: pages.Backa,
+    Login: pages.Login,
+    Setting: pages.Setting,
     HeaderImageScrollView: pages.HeaderImageScrollView,
   },
   StackNavigatorConfig({
