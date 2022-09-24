@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 @connect(HomeSelector, HomeActions)
 export default class Gong extends Component {
   static navigationOptions = {
-    headerTitle: 'FlatList and Placeholder',
+    headerTitle: '我的',
   };
 
   componentDidMount() {
@@ -50,7 +50,7 @@ export default class Gong extends Component {
             this.goBack('Mo');
           }}
         >
-          账户总览
+          认证联系人
         </Text>
         <Text
           style={styles.headerButton}
@@ -58,7 +58,7 @@ export default class Gong extends Component {
             this.goBack('Login');
           }}
         >
-          汇入
+          企业服务
         </Text>
         <Text
           style={styles.headerButton}
@@ -66,7 +66,7 @@ export default class Gong extends Component {
             this.goBack('Login');
           }}
         >
-          汇出
+          客服
         </Text>
         <Text
           style={styles.headerButton}
@@ -74,7 +74,7 @@ export default class Gong extends Component {
             this.goBack('Login');
           }}
         >
-          交易明细
+          联系我们
         </Text>
       </View>
     );

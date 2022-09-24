@@ -23,9 +23,9 @@ const styles = StyleSheet.create({
 });
 
 export default class Demo extends Component {
-  static navigationOptions = {
-    headerTitle: '墨子攻城1',
-  };
+  static navigationOptions = ({ navigation, }) => ({
+    headerTitle: '首页222',
+  });
   render() {
     const { navigation, } = this.props;
     return (
