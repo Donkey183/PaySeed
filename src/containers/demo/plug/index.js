@@ -1,5 +1,8 @@
 import React, { Component, } from 'react';
-import { StyleSheet, Text, View, } from 'react-native';
+import { StyleSheet, Text, View, InteractionManager, } from 'react-native';
+import HomeSelector from '../../../app/selectors/home';
+import * as HomeActions from '../../../app/actions/home';
+import connect from '../../../app/store/connect';
 
 const styles = StyleSheet.create({
   container: {
@@ -13,14 +16,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
+  border: {
+    borderBottomWidth: 1,
+    borderBottomColor: '#fcfcfc',
+    backgroundColor: 'white',
+    marginBottom: -0.5,
+  },
 });
-
-const apiurls = {
-  mozi: 'https://github.com/duheng/Mozi',
-  icons: 'https://www.jianshu.com/p/a25e4ecce60f',
-  splash: 'https://www.jianshu.com/p/4540ac17dfd4',
-};
-
+@connect(HomeSelector, HomeActions)
 export default class Plug extends Component {
   static navigationOptions = {
     headerTitle: '墨依赖!&',
@@ -43,24 +46,28 @@ export default class Plug extends Component {
     navigation.navigate('Gong');
   };
 
+  sendRequest() {
+    InteractionManager.runAfterInteractions(() => {
+      console.log('========sendRequest======fetchMovies=========');
+      this.props.actions.fetchMovies({
+        ci: 1,
+        limit: 100,
+        offset: 0,
+        token: 'mozi',
+        optimus_uuid: 'mozi',
+      });
+    });
+  }
   render() {
     return (
       <View style={styles.container}>
         <Text
           style={styles.welcome}
           onPress={() => {
-            this.goWeb(apiurls.splash);
-          }}
-        >
-          启动屏!
-        </Text>
-        <Text
-          style={styles.welcome}
-          onPress={() => {
             this.goBack();
           }}
         >
-          返回到指定页面Demo!
+          跳转页面
         </Text>
         <Text
           style={styles.welcome}
@@ -68,49 +75,24 @@ export default class Plug extends Component {
             this.goTab();
           }}
         >
-          跳转到指定tab页面
+          跳转Tab
         </Text>
         <Text
           style={styles.welcome}
           onPress={() => {
-            this.goWeb();
+            this.goWeb('https://www.jianshu.com/p/2049eec9154e');
           }}
         >
-          react-navigation集成!
+          跳转web页
         </Text>
         <Text
           style={styles.welcome}
           onPress={() => {
-            this.goWeb(apiurls.icons);
+            this.sendRequest();
           }}
         >
-          react-native-vector-icons集成!
+          发送网络请求
         </Text>
-        <Text
-          style={styles.welcome}
-          onPress={() => {
-            this.goWeb();
-          }}
-        >
-          codepush集成!
-        </Text>
-        <Text
-          style={styles.welcome}
-          onPress={() => {
-            this.goWeb();
-          }}
-        >
-          jpush集成!
-        </Text>
-        <Text
-          style={styles.welcome}
-          onPress={() => {
-            this.goWeb();
-          }}
-        >
-          redux集成!
-        </Text>
-
       </View>
     );
   }

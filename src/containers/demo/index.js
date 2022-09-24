@@ -26,6 +26,7 @@ export default class Demo extends Component {
   static navigationOptions = ({ navigation, }) => ({
     headerTitle: '首页222',
   });
+
   render() {
     const { navigation, } = this.props;
     return (

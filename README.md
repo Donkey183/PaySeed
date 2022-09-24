@@ -47,13 +47,14 @@
 ```
 git clone https://github.com/duheng/Mozi.git
 
-cd Mozi
+cd PaySeed
 
 yarn install
 
 yarn start
 
-yarn run ios (android)
+另起一个窗口执行
+yarn run ios
 
 windows用户请用 react-native run-android 命令启动
 ```
