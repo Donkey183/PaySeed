@@ -19,13 +19,13 @@ export default class Backa extends Component {
   static navigationOptions = {
     headerTitle: '第一个入栈的页面',
     // 把返回标题改成 绿色了
-    headerBackTitleStyle: {
-      color: '#FFCCAA',
-    },
+    // headerBackTitleStyle: {
+    //   color: '#FFCCAA',
+    // },
     // headerBackImage: require("../../images/back.png"),
-    headerStyle: {
-      backgroundColor: "#FFFFFF",
-    },
+    // headerStyle: {
+    //   backgroundColor: "#FFFFFF",
+    // },
   };
 
   goBack = () => {
@@ -42,7 +42,7 @@ export default class Backa extends Component {
             this.goBack();
           }}
         >
-          去登陆
+          去登陆22
         </Text>
       </View>
     );

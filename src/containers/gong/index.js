@@ -31,69 +31,53 @@ export default class Gong extends Component {
     headerTitle: 'FlatList and Placeholder',
   };
 
-  componentWillMount() {
-    InteractionManager.runAfterInteractions(() => {
-      this.props.actions.fetchMovies({
-        ci: 1,
-        limit: 100,
-        offset: 0,
-        token: 'mozi',
-        optimus_uuid: 'mozi',
-      });
+  componentDidMount() {
+    this.props.navigation.setParams({
+      goBack: this.goBack,
     });
   }
 
-  headerImageScrollView = () => {
-    const { navigation, } = this.props;
-    navigation.navigate('HeaderImageScrollView');
+  goBack = (pageName) => {
+    this.props.navigation.navigate(pageName);
   };
 
-  flatList = () => {
-    const { home, } = this.props;
 
+  render() {
     return (
-      <FlatList
-        ref={view => { this.flist = view; }}
-        style={styles.container}
-        initialNumToRender={8}
-        scrollEventThrottle={16}
-        onEndReachedThreshold={0.01}
-        removeClippedSubviews
-        windowSize={350} // 如果你的列表的2-3行占一屏的话，这个值应该设置450-600之前，如果四五行占一屏应该设置300-350之间
-        keyExtractor={item => `gong_${item.data[0].id}`}
-        ListHeaderComponent={() => {
-          return this.renderHeader();
-        }}
-        renderItem={item => {
-          return this.renderItem(item);
-        }}
-        data={home.movies}
-      />
-    );
-  };
-  renderHeader = () => {
-    return (
-      <View style={styles.headerButton}>
-        <Text style={styles.welcome} onPress={this.headerImageScrollView}>
-          自定义头部图片 & 缩放!
+      <View style={styles.container}>
+        <Text
+          style={styles.headerButton}
+          onPress={() => {
+            this.goBack('Mo');
+          }}
+        >
+          账户总览
+        </Text>
+        <Text
+          style={styles.headerButton}
+          onPress={() => {
+            this.goBack('Login');
+          }}
+        >
+          汇入
+        </Text>
+        <Text
+          style={styles.headerButton}
+          onPress={() => {
+            this.goBack('Login');
+          }}
+        >
+          汇出
+        </Text>
+        <Text
+          style={styles.headerButton}
+          onPress={() => {
+            this.goBack('Login');
+          }}
+        >
+          交易明细
         </Text>
       </View>
     );
-  };
-
-  renderItem = item => {
-    return <ListItem data={item.item.data[0]} />;
-  };
-
-  render() {
-    const { home, } = this.props;
-    let loading = true;
-    if (!!home.movies && home.movies.length > 0) {
-      loading = false;
-    }
-    setTimeout(() => {
-      this.flist && this.flist.recordInteraction();
-    }, 50);
-    return <ListParagraph style={{ flex: 1, }} ParagraphLength={8} isLoading={loading} list={this.flatList} />;
   }
 }

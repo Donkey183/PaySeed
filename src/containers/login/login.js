@@ -26,14 +26,14 @@ const styles = StyleSheet.create({
 export default class Login extends Component {
   static navigationOptions = ({ navigation, }) => ({
     headerTitle: '登陆页标题',
-    headerLeft: (
-      <NavigationButton
-        name="Login"
-        callback={() => {
-          navigation.state.params.goBack && navigation.state.params.goBack();
-        }}
-      />
-    ),
+    // headerLeft: (
+    //   <NavigationButton
+    //     name="Login"
+    //     callback={() => {
+    //       navigation.state.params.goBack && navigation.state.params.goBack();
+    //     }}
+    //   />
+    // ),
   });
 
   componentDidMount() {
@@ -49,7 +49,7 @@ export default class Login extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar barStyle="light-content" backgroundColor="#FFFFFF" />
+        <StatusBar barStyle="dark-content" backgroundColor="#FFAACC" />
         <Text
           style={styles.welcome}
           onPress={() => {

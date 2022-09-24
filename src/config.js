@@ -71,16 +71,8 @@ const StackNavigatorConfig = options => {
 
   const {
     headerBackTitle = null,
-    headerTintColor = '#FFFFFF',
+    headerTintColor = '#000000',
     gesturesEnabled = true,
-    headerBackgroundColor = '#262a37',
-    headerTitleStyle = {
-      alignSelf: 'center',
-      textAlign: 'center',
-      flex: 1,
-      fontSize: 18,
-      color: '#9c9c9c',
-    },
   } = window || {};
   return {
     initialRouteName,
@@ -91,13 +83,19 @@ const StackNavigatorConfig = options => {
       headerBackTitle, // 返回按钮文字
       headerTintColor, // 返回按钮颜色
       gesturesEnabled, // 是否支持滑动返回
-      headerTitleStyle,
+      headerTitleStyle: {
+        alignSelf: 'center',
+        textAlign: 'center',
+        flex: 1,
+        fontSize: 18,
+        color: '#000000',
+      },
       headerTitleContainerStyle: {
         left: TITLE_OFFSET,
         right: TITLE_OFFSET,
       },
       headerStyle: {
-        backgroundColor: headerBackgroundColor,
+        backgroundColor: "#FFFFFF",
         shadowColor: 'transparent',
         shadowOpacity: 0,
         borderBottomWidth: 0,

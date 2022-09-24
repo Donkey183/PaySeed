@@ -9,6 +9,7 @@ import SplashScreen from 'react-native-splash-screen';
 import codePush from 'react-native-code-push';
 import configureStore from './app/store/configureStore';
 import App from './AppNavigationState';
+import { StatusBar, } from 'react-native';
 
 const store = configureStore();
 
@@ -25,6 +26,13 @@ export default class Root extends Component {
     console.log('store----', store);
     return (
       <Provider store={store}>
+        <StatusBar
+          animated={true}
+          barStyle="dark-content"
+          backgroundColor="#FFFFFF"
+          translucent={false}
+          showHideTransition={'fade'}
+        />
         <App />
       </Provider>
     );
