@@ -1,8 +1,7 @@
 import React, { Component, } from 'react';
-import { StyleSheet, Text, View, FlatList, InteractionManager, } from 'react-native';
+import { StyleSheet, Text, View, } from 'react-native';
 import HomeSelector from '../../app/selectors/home';
 import * as HomeActions from '../../app/actions/home';
-import { ListItem, ListParagraph, } from '../../components';
 import connect from '../../app/store/connect';
 
 const styles = StyleSheet.create({

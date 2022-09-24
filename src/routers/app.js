@@ -10,7 +10,7 @@ const TabNav = createBottomTabNavigator(
     Mo: pages.Mo,
     Zi: pages.Zi,
     Gong: pages.Gong,
-    Cheng: pages.Cheng,
+    // Cheng: pages.Cheng,
   },
   BottomTabNavigatorConfig({
     initialRouteName: 'Mo',

@@ -22,12 +22,12 @@ const tabBar = {
       icoName: "ios-analytics",
       text: "攻",
     },
-    Cheng: {
-      icoPath: "",
-      selectedIconPath: "",
-      icoName: "ios-contacts",
-      text: "城",
-    },
+    // Cheng: {
+    //   icoPath: "",
+    //   selectedIconPath: "",
+    //   icoName: "ios-contacts",
+    //   text: "城",
+    // },
   },
 };
 
