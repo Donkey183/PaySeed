@@ -8,26 +8,20 @@ const tabBar = {
       icoPath: "",
       selectedIconPath: "",
       icoName: "ios-home",
-      text: "墨",
+      text: "首页",
     },
     Zi: {
       icoPath: "",
       selectedIconPath: "",
       icoName: "ios-planet",
-      text: "子",
+      text: "项目示例",
     },
     Gong: {
       icoPath: "",
       selectedIconPath: "",
       icoName: "ios-analytics",
-      text: "攻",
+      text: "我的",
     },
-    // Cheng: {
-    //   icoPath: "",
-    //   selectedIconPath: "",
-    //   icoName: "ios-contacts",
-    //   text: "城",
-    // },
   },
 };
 

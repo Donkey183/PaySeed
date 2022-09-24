@@ -8,7 +8,7 @@ import * as pages from './index';
 const TabNav = createBottomTabNavigator(
   {
     Mo: pages.Mo,
-    Zi: pages.Zi,
+    Zi: pages.Demo,
     Gong: pages.Gong,
     // Cheng: pages.Cheng,
   },

@@ -1,6 +1,7 @@
 
 import Mo from '../containers/home';
 import Zi from '../containers/zi';
+import Demo from '../containers/demo';
 import Gong from '../containers/me';
 // import Cheng from '../containers/cheng';
 import Web from '../containers/demo/web';
@@ -14,6 +15,7 @@ module.exports = {
   Mo,
   Zi,
   Gong,
+  Demo,
   // Cheng,
   Web,
   Back,
