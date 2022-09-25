@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 });
 
 @connect(HomeSelector, HomeActions)
-export default class Gong extends Component {
+export default class Me extends Component {
   static navigationOptions = {
     headerTitle: '我的',
   };

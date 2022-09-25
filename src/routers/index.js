@@ -1,7 +1,7 @@
 
-import Mo from '../containers/home';
+import Home from '../containers/home';
 import Demo from '../containers/demo/index';
-import Gong from '../containers/me';
+import Me from '../containers/me';
 import Web from '../containers/demo/web';
 import Back from '../containers/demo/back';
 import Login from '../containers/login/login';
@@ -10,8 +10,8 @@ import Backa from '../containers/demo/backa';
 import HeaderImageScrollView from '../containers/me/HeaderImageScrollView';
 
 module.exports = {
-  Mo,
-  Gong,
+  Home,
+  Me,
   Demo,
   Web,
   Back,

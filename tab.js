@@ -4,7 +4,7 @@ const tabBar = {
   backgroundColor: "#FFFFFF",
   activeTintColor: "#42c02e",
   list: {
-    Mo: {
+    Home: {
       icoPath: "",
       selectedIconPath: "",
       icoName: "ios-home",
@@ -16,7 +16,7 @@ const tabBar = {
       icoName: "ios-planet",
       text: "项目示例",
     },
-    Gong: {
+    Me: {
       icoPath: "",
       selectedIconPath: "",
       icoName: "ios-analytics",

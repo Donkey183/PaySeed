@@ -7,13 +7,12 @@ import * as pages from './index';
 
 const TabNav = createBottomTabNavigator(
   {
-    Mo: pages.Mo,
+    Home: pages.Home,
     Demo: pages.Demo,
-    Gong: pages.Gong,
-    // Cheng: pages.Cheng,
+    Me: pages.Me,
   },
   BottomTabNavigatorConfig({
-    initialRouteName: 'Mo',
+    initialRouteName: 'Home',
   }),
 );
 

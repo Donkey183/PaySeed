@@ -43,7 +43,7 @@ export default class Plug extends Component {
 
   goTab = () => {
     const { navigation, } = this.props;
-    navigation.navigate('Gong');
+    navigation.navigate('Me');
   };
 
   sendRequest() {

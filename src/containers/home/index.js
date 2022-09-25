@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 });
 
 @connect(HomeSelector, HomeActions)
-export default class Mo extends Component {
+export default class Home extends Component {
   static navigationOptions = {
     headerTitle: '首页',
   };

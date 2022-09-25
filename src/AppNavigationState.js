@@ -47,7 +47,7 @@ export default class AppNavigationState extends Component {
     // 打开通知
     JPushModule.addReceiveOpenNotificationListener(() => {
       console.log('Opening notification!');
-      !!this.root && this.root._navigation.navigate('Gong');
+      !!this.root && this.root._navigation.navigate('Me');
     });
   }
 
