@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, InteractionManager, } from 'react-native';
 import HomeSelector from '../../../app/selectors/home';
 import * as HomeActions from '../../../app/actions/home';
 import connect from '../../../app/store/connect';
+import { Toast, } from '../../../components';
 
 const styles = StyleSheet.create({
   container: {
@@ -25,9 +26,18 @@ const styles = StyleSheet.create({
 });
 @connect(HomeSelector, HomeActions)
 export default class Plug extends Component {
+
   static navigationOptions = {
     headerTitle: '墨依赖!&',
   };
+
+  constructor(...args) {
+    super(...args);
+    this.state = {
+      isRefreshing: false,
+      flagApi: true,
+    };
+  }
 
   goWeb = (gourl = 'https://www.jianshu.com/u/c971c7ffa27e') => {
     const { navigation, } = this.props;
@@ -47,8 +57,9 @@ export default class Plug extends Component {
   };
 
   sendRequest() {
+    this.setState({ isRefreshing: true, });
     InteractionManager.runAfterInteractions(() => {
-      console.log('========sendRequest======fetchMovies=========');
+      console.log('======TAG==sendRequest======fetchMovies=========');
       this.props.actions.fetchMovies({
         ci: 1,
         limit: 100,
@@ -59,6 +70,12 @@ export default class Plug extends Component {
     });
   }
   render() {
+    const { home, } = this.props;
+    if (!!home.movies && home.movies.length > 0) {
+      const resValue = JSON.stringify(home.movies[0]);
+      Toast.show({ title: resValue, });
+      console.log("======TAG===render===movies", home.movies);
+    }
     return (
       <View style={styles.container}>
         <Text

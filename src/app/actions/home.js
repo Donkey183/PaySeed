@@ -13,7 +13,6 @@ const fetchMovies = params => {
   return dispatch => {
     return GET(movieList, params).then(resp => {
       const { coming, } = resp;
-      console.log("=====fetchMovies======resp=====", JSON.stringify(resp));
       dispatch(
         receiveMovies({
           movies: coming,
