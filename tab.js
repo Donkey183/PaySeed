@@ -10,7 +10,7 @@ const tabBar = {
       icoName: "ios-home",
       text: "首页",
     },
-    Zi: {
+    Demo: {
       icoPath: "",
       selectedIconPath: "",
       icoName: "ios-planet",

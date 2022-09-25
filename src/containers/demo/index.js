@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
 
 export default class Demo extends Component {
   static navigationOptions = ({ navigation, }) => ({
-    headerTitle: '首页222',
+    headerTitle: '项目示例',
   });
 
   render() {
