@@ -1,5 +1,5 @@
 import React, { Component, } from 'react';
-import { BackHandler, ToastAndroid, Platform, } from 'react-native';
+import { BackHandler, ToastAndroid, Platform, AsyncStorage, } from 'react-native';
 import { connect, } from 'react-redux';
 import { NavigationActions, } from 'react-navigation';
 import JPushModule from 'jpush-react-native';

@@ -59,8 +59,7 @@ export default class Plug extends Component {
   sendRequest() {
     this.setState({ isRefreshing: true, });
     InteractionManager.runAfterInteractions(() => {
-      console.log('======TAG==sendRequest======fetchMovies=========');
-      this.props.actions.fetchMovies({
+      this.props.actions.doLogout({
         ci: 1,
         limit: 100,
         offset: 0,
@@ -71,11 +70,11 @@ export default class Plug extends Component {
   }
   render() {
     const { home, } = this.props;
-    if (!!home.movies && home.movies.length > 0) {
-      const resValue = JSON.stringify(home.movies[0]);
-      Toast.show({ title: resValue, });
-      console.log("======TAG===render===movies", home.movies);
+    console.log("======TAG===render===home===", home);
+    if (home.logout) {
+      Toast.show({ title: "已退出登陆", });
     }
+
     return (
       <View style={styles.container}>
         <Text

@@ -1,21 +1,22 @@
 import { GET, } from '../../commons/utils/request';
-import { movieList, } from '../constants/urls';
+import { logout, } from '../constants/urls';
 import * as types from '../constants/actionTypes';
 
 const receiveMovies = data => {
   return {
-    type: types.RECEIVE_MOVIES,
+    type: types.LOGOUT_STATE,
     ...data,
   };
 };
 
-const fetchMovies = params => {
+const doLogout = params => {
   return dispatch => {
-    return GET(movieList, params).then(resp => {
-      const { coming, } = resp;
+    return GET(logout, params).then(resp => {
+      const { coming, code, } = resp;
       dispatch(
         receiveMovies({
           movies: coming,
+          logout: code === 0,
         }),
       );
     });
@@ -24,5 +25,5 @@ const fetchMovies = params => {
 
 
 module.exports = {
-  fetchMovies,
+  doLogout,
 };

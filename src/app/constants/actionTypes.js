@@ -7,3 +7,4 @@ export const SET_SIGIN_STATE = 'SET_SIGIN_STATE';
 
 // movies
 export const RECEIVE_MOVIES = 'RECEIVE_MOVIES';
+export const LOGOUT_STATE = 'LOGOUT_STATE';
