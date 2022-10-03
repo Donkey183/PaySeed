@@ -47,7 +47,7 @@ export default class Me extends Component {
         <Text
           style={styles.headerButton}
           onPress={() => {
-            this.goBack('Mo');
+            this.goBack('Login');
           }}
         >
           认证联系人

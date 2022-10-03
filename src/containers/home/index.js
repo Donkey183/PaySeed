@@ -47,7 +47,7 @@ export default class Home extends Component {
         <Text
           style={styles.headerButton}
           onPress={() => {
-            this.goBack('Mo');
+            this.goBack('Login');
           }}
         >
           注册
@@ -55,7 +55,7 @@ export default class Home extends Component {
         <Text
           style={styles.headerButton}
           onPress={() => {
-            this.goBack('Mo');
+            this.goBack('Login');
           }}
         >
           登陆
@@ -63,7 +63,7 @@ export default class Home extends Component {
         <Text
           style={styles.headerButton}
           onPress={() => {
-            this.goBack('Mo');
+            this.goBack('Login');
           }}
         >
           开户

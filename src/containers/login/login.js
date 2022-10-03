@@ -1,7 +1,6 @@
 import React, { Component, } from 'react';
-import { StyleSheet, Text, View, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, } from 'react-native';
 import connect from '../../app/store/connect';
-import NavigationButton from '../../components/NavigationButton';
 
 const styles = StyleSheet.create({
   container: {
@@ -43,13 +42,12 @@ export default class Login extends Component {
   }
 
   goBack = () => {
-    this.props.navigation.navigate('Mo');
+    this.props.navigation.navigate('Home');
   };
 
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar barStyle="dark-content" backgroundColor="#FFAACC" />
         <Text
           style={styles.welcome}
           onPress={() => {
