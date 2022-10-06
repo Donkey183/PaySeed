@@ -41,7 +41,7 @@ export default class Demo extends Component {
       >
         <Plug tabLabel={'路由示例'} navigation={navigation} />
         <Moui tabLabel={'组件示例'} navigation={navigation} />
-        <Rule tabLabel={'空页面'} navigation={navigation} />
+        {/* <Rule tabLabel={'空页面'} navigation={navigation} /> */}
       </ScrollableTabView>
     );
   }

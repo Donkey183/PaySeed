@@ -1,6 +1,11 @@
 import React, { Component, } from 'react';
 import { StyleSheet, Text, View, } from 'react-native';
+import ScrollableTabView, { DefaultTabBar, } from 'react-native-scrollable-tab-view';
 import connect from '../../app/store/connect';
+import LoginBiz from './biz';
+
+const activeTabColor = '#42c02e';
+const defaultTabColor = "#949494";
 
 const styles = StyleSheet.create({
   container: {
@@ -13,6 +18,17 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
+  },
+  underline: {
+    height: 3,
+    backgroundColor: '#42c02e',
+    alignItems: 'center',
+  },
+  border: {
+    borderBottomWidth: 1,
+    borderBottomColor: '#fcfcfc',
+    backgroundColor: 'white',
+    marginBottom: -0.5,
   },
 });
 
@@ -46,17 +62,20 @@ export default class Login extends Component {
   };
 
   render() {
+    const { navigation, } = this.props;
     return (
-      <View style={styles.container}>
-        <Text
-          style={styles.welcome}
-          onPress={() => {
-            this.goBack();
-          }}
-        >
-          点击回首页
-        </Text>
-      </View>
+      <ScrollableTabView
+        scrollWithoutAnimation={false}
+        locked={false}
+        initialPage={0}
+        tabBarUnderlineStyle={styles.underline}
+        tabBarInactiveTextColor={defaultTabColor}
+        tabBarActiveTextColor={activeTabColor}
+        renderTabBar={() => <DefaultTabBar style={styles.border} />}
+      >
+        <LoginBiz tabLabel={'验证码登陆2'} navigation={navigation} />
+        <LoginBiz tabLabel={'密码登陆'} navigation={navigation} />
+      </ScrollableTabView>
     );
   }
 }
