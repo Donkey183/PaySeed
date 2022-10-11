@@ -1,0 +1,71 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+
+target 'Mozi' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Mozi
+
+  pod 'JSONModel', '1.8.0'
+  pod 'AFNetworking', :git=> 'git@git.corp.kuaishou.com:ios/AFNetworking.git', :tag=>'4.0.1'
+  pod 'YYWebImage', :git=> 'git@git.corp.kuaishou.com:lib-iOS/YYWebImage.git'
+  pod 'YYImage', :git=> 'git@git.corp.kuaishou.com:lib-iOS/YYImage.git'
+  pod 'YYCache', :git=> 'git@git.corp.kuaishou.com:lib-iOS/YYCache.git'
+  pod 'SSZipArchive', :git=> 'git@git.corp.kuaishou.com:lib-iOS/SSZipArchive.git', :tag=>'v2.2.3'
+
+  # react-native
+  pod 'React', :path => '../node_modules/react-native'
+  # pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+  # pod 'RNSVG', :path => '../node_modules/react-native-svg'
+  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+  pod 'CodePush', :path => '../node_modules/react-native-code-push'
+
+
+  # target 'Mozi-tvOSTests' do
+  #   inherit! :search_paths
+  #   # Pods for testing
+  # end
+
+  # target 'MoziTests' do
+  #   inherit! :search_paths
+  #   # Pods for testing
+  # end
+
+end
+
+# post_install do |installer|
+#   ## Fix for XCode 12.5
+#   find_and_replace("../node_modules/react-native/React/CxxBridge/RCTCxxBridge.mm",
+#   "_initializeModules:(NSArray<id<RCTBridgeModule>> *)modules", "_initializeModules:(NSArray<Class> *)modules")
+#   find_and_replace("../node_modules/react-native/ReactCommon/turbomodule/core/platform/ios/RCTTurboModuleManager.mm",
+#       "RCTBridgeModuleNameForClass(module))", "RCTBridgeModuleNameForClass(Class(module)))")
+# end
+
+# def find_and_replace(dir, findstr, replacestr)
+#   Dir[dir].each do |name|
+#       text = File.read(name)
+#       replace = text.gsub(findstr,replacestr)
+#       if text != replace
+#           puts "Fix: " + name
+#           File.open(name, "w") { |file| file.puts replace }
+#           STDOUT.flush
+#       end
+#   end
+#   Dir[dir + '*/'].each(&method(:find_and_replace))
+# end
+
+
+# target 'Mozi-tvOS' do
+#   # Comment the next line if you don't want to use dynamic frameworks
+#   use_frameworks!
+
+#   # Pods for Mozi-tvOS
+
+#   target 'Mozi-tvOSTests' do
+#     inherit! :search_paths
+#     # Pods for testing
+#   end
+
+# end

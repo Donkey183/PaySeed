@@ -27,7 +27,7 @@ export default class Root extends Component {
     return (
       <Provider store={store}>
         <StatusBar
-          animated={true}
+          animated
           barStyle="dark-content"
           backgroundColor="#FFFFFF"
           translucent={false}

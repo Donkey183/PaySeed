@@ -1,5 +1,5 @@
 import React, { Component, } from 'react';
-import { StyleSheet, Text, View, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, } from 'react-native';
 import connect from '../../app/store/connect';
 import NavigationButton from '../../components/NavigationButton';
 

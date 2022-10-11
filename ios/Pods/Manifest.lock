@@ -1,0 +1,80 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - JSONModel (1.8.0)
+  - SSZipArchive (2.2.3)
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
+
+DEPENDENCIES:
+  - "AFNetworking (from `git@git.corp.kuaishou.com:ios/AFNetworking.git`, tag `4.0.1`)"
+  - JSONModel (= 1.8.0)
+  - "SSZipArchive (from `git@git.corp.kuaishou.com:lib-iOS/SSZipArchive.git`, tag `v2.2.3`)"
+  - "YYCache (from `git@git.corp.kuaishou.com:lib-iOS/YYCache.git`)"
+  - "YYImage (from `git@git.corp.kuaishou.com:lib-iOS/YYImage.git`)"
+  - "YYWebImage (from `git@git.corp.kuaishou.com:lib-iOS/YYWebImage.git`)"
+
+SPEC REPOS:
+  trunk:
+    - JSONModel
+
+EXTERNAL SOURCES:
+  AFNetworking:
+    :git: "git@git.corp.kuaishou.com:ios/AFNetworking.git"
+    :tag: 4.0.1
+  SSZipArchive:
+    :git: "git@git.corp.kuaishou.com:lib-iOS/SSZipArchive.git"
+    :tag: v2.2.3
+  YYCache:
+    :git: "git@git.corp.kuaishou.com:lib-iOS/YYCache.git"
+  YYImage:
+    :git: "git@git.corp.kuaishou.com:lib-iOS/YYImage.git"
+  YYWebImage:
+    :git: "git@git.corp.kuaishou.com:lib-iOS/YYWebImage.git"
+
+CHECKOUT OPTIONS:
+  AFNetworking:
+    :git: "git@git.corp.kuaishou.com:ios/AFNetworking.git"
+    :tag: 4.0.1
+  SSZipArchive:
+    :git: "git@git.corp.kuaishou.com:lib-iOS/SSZipArchive.git"
+    :tag: v2.2.3
+  YYCache:
+    :commit: 6861339a7bd8f01b3cab3667906c1cf233632a7f
+    :git: "git@git.corp.kuaishou.com:lib-iOS/YYCache.git"
+  YYImage:
+    :commit: 0071d7246d30683b91586a3850aec366b9daf330
+    :git: "git@git.corp.kuaishou.com:lib-iOS/YYImage.git"
+  YYWebImage:
+    :commit: 53f48fc60efd201ba5f640818f48babc69a5e92d
+    :git: "git@git.corp.kuaishou.com:lib-iOS/YYWebImage.git"
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
+  SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
+  YYCache: b4770a4d52eec09fc1c997022e947cf247067289
+  YYImage: 5f6b41489bccfb9afde02dd73d3dc4b2de0e4521
+  YYWebImage: 7fe1c13a0cad7a5fe203d9cfe916586ca7c7e151
+
+PODFILE CHECKSUM: 9d51c5a11d31e2e5c491c41a94de2b4b70366974
+
+COCOAPODS: 1.11.3

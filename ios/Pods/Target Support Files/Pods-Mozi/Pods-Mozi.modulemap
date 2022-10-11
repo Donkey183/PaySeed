@@ -1,0 +1,6 @@
+framework module Pods_Mozi {
+  umbrella header "Pods-Mozi-umbrella.h"
+
+  export *
+  module * { export * }
+}
