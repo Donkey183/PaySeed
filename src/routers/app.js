@@ -42,6 +42,7 @@ const AppStack = createStackNavigator(
     Login: pages.Login,
     Setting: pages.Setting,
     HeaderImageScrollView: pages.HeaderImageScrollView,
+    Account: pages.Account,
   },
   StackNavigatorConfig({
     initialRouteName: 'Root',

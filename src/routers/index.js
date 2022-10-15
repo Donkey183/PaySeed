@@ -2,6 +2,7 @@
 import Home from '../containers/home';
 import Demo from '../containers/demo/index';
 import Me from '../containers/me';
+import Account from '../containers/account';
 import Web from '../containers/demo/web';
 import Back from '../containers/demo/back';
 import Login from '../containers/login/login';
@@ -12,6 +13,7 @@ import HeaderImageScrollView from '../containers/me/HeaderImageScrollView';
 module.exports = {
   Home,
   Me,
+  Account,
   Demo,
   Web,
   Back,

@@ -63,7 +63,7 @@ export default class Home extends Component {
         <Text
           style={styles.headerButton}
           onPress={() => {
-            this.goBack('Account');
+            this.goBack('Login');
           }}
         >
           开户

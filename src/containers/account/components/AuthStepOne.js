@@ -1,8 +1,8 @@
 import React, { Component, } from 'react';
 import { StyleSheet, Text, View, } from 'react-native';
-import HomeSelector from '../../app/selectors/home';
-import * as HomeActions from '../../app/actions/home';
-import connect from '../../app/store/connect';
+import HomeSelector from '../../../app/selectors/home';
+import * as HomeActions from '../../../app/actions/home';
+import connect from '../../../app/store/connect';
 
 const styles = StyleSheet.create({
   container:
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 });
 
 @connect(HomeSelector, HomeActions)
-export default class Home extends Component {
+export default class AuthStepOne extends Component {
   static navigationOptions = {
     headerTitle: '首页',
   };
@@ -37,7 +37,7 @@ export default class Home extends Component {
   }
 
   goBack = (pageName) => {
-    this.props.navigation.navigate(pageName);
+    this.props.navigation.navigatenavigate(pageName);
   };
 
 
@@ -63,7 +63,7 @@ export default class Home extends Component {
         <Text
           style={styles.headerButton}
           onPress={() => {
-            this.goBack('Account');
+            this.goBack('Login');
           }}
         >
           开户
