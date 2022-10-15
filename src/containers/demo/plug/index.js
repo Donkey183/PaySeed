@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
 });
 @connect(HomeSelector, HomeActions)
 export default class Plug extends Component {
-
   static navigationOptions = {
     headerTitle: '墨依赖!&',
   };

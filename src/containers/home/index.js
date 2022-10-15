@@ -87,7 +87,7 @@ export default class Home extends Component {
         <Text
           style={styles.headerButton}
           onPress={() => {
-            this.goBack('Login');
+            this.goBack('InterbankTransfer');
           }}
         >
           汇出
