@@ -42,6 +42,7 @@ const AppStack = createStackNavigator(
     Login: pages.Login,
     Setting: pages.Setting,
     HeaderImageScrollView: pages.HeaderImageScrollView,
+    InterbankTransfer: pages.InterbankTransfer,
   },
   StackNavigatorConfig({
     initialRouteName: 'Root',

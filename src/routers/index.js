@@ -4,6 +4,7 @@ import Demo from '../containers/demo/index';
 import Me from '../containers/me';
 import Web from '../containers/demo/web';
 import Back from '../containers/demo/back';
+import InterbankTransfer from '../containers/demo/interbankTransfer';
 import Login from '../containers/login/login';
 import Setting from '../containers/setting/setting';
 import Backa from '../containers/demo/backa';
@@ -19,4 +20,5 @@ module.exports = {
   Login,
   Setting,
   HeaderImageScrollView,
+  InterbankTransfer,
 };
